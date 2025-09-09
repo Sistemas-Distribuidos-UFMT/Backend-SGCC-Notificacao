@@ -1,17 +1,18 @@
 package br.com.ufmt.backendsgccnotificacao.dtos;
 
-import java.time.LocalDateTime;
-
-// Usaremos Lombok para gerar getters, setters, etc.
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.UUID; // IMPORTAR
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class NotificacaoDTO {
 
+    private UUID consultaId; // <-- CAMPO ADICIONADO
     private TipoNotificacao tipo;
     private String destinatarioEmail;
     private String nomePaciente;
